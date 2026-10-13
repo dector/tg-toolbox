@@ -154,7 +154,7 @@ func run(args []string, key string, w io.Writer) error {
 	}
 	key = strings.TrimSpace(key)
 	if key == "" {
-		return fmt.Errorf("set TG_BOT_KEY to your Telegram bot token")
+		return fmt.Errorf("TG_BOT_KEY is not set. Set it to your Telegram bot token from @BotFather:\n  export TG_BOT_KEY='your-bot-token'\nThen run: tg-toolbox messages recent")
 	}
 	client := &http.Client{
 		Timeout:       15 * time.Second,
